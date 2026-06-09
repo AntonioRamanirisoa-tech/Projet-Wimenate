@@ -1,0 +1,211 @@
+head.img{
+    border-radius: 300px;
+}
+
+hr {
+    color: rgba(218, 165, 32, 0.397);
+}
+body{
+    background: rgb(0, 0, 0);
+    color: antiquewhite;
+}
+nav .navigation {
+    font-size: 20pt;
+    border: 1px solid rgba(218, 165, 32, 0.356);
+    border-radius: 50px;
+    position: fixed;
+    right: 0;
+    background-color: black;
+
+    z-index: 9;
+}
+nav div.navigation ul  {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 30px;
+    margin-left: auto;
+}
+nav div.navigation ul a {
+    text-decoration: none;
+    color: rgba(250, 235, 215, 0.596);
+}
+div.titre_logos{
+    margin-left: 150px;
+}
+div.logos img{
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+    margin-top: -50px;
+}
+div.presentation h1{
+    font-size: 35pt;
+    text-align: center;
+    margin-top: 150px;
+    font-family:italic;
+    color: rgb(218, 165, 32);
+}
+div.presentation h1 p{
+    font-size: 15pt;
+    color: rgba(250, 235, 215, 0.562);
+    margin-bottom: 200px;
+} 
+div.container2 div{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 90px;
+}
+div.container2 div h1{
+    padding: 20px;
+    padding-top:10px ;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid goldenrod;
+    border-radius: 25px;
+    background-color: rgba(228, 170, 23, 0.192);
+    color: black;
+}
+div.container2 div h2{
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid rgba(218, 165, 32, 0.356);
+    border-radius: 25px;
+    color: rgba(250, 235, 215, 0.596);
+}
+div.container3 {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-bottom: 100px;
+    padding: 15px;
+    border: 1px solid rgba(218, 165, 32, 0.562);
+    gap: 1px;
+    clip-path: polygon(40px 0px, 100% 0px, 100% 100%, 0px 100%, 0px 40px);
+    background-color: rgba(218, 160, 12, 0.288);
+}
+div.container3:hover{
+    animation: vibre ease-in-out 80ms infinite;
+}
+@keyframes vibre{
+    0% {
+        transform: rotate(1deg);
+    }
+    100%{
+        transform: rotate(-1deg);
+    }
+}
+/* div.container3:hover{
+    transform: scale(1.1);
+    transition: 1.1;
+} */
+div.container3 div.c3_A{
+    padding: 16px;
+}
+div.container3 div.c3_A p{
+    color: rgba(250, 235, 215, 0.671);
+}
+div.container3 div.c3_A h2{
+    color: rgba(250, 235, 215, 0.5);
+}
+div.container4 div.c4_A{
+    margin-top: 70px;
+    font-size: 10pt;
+    color: rgba(218, 165, 32, 0.596);
+}
+div.c4_B{
+    display: flex;
+    gap: 30px;
+    margin-left: 150px;
+    margin-top: 70px;
+}
+div.c4_B p {
+    color: rgba(250, 235, 215, 0.466);
+}
+div.c4_B1{
+    border: 2px solid rgba(218, 165, 32, 0.384);
+    border-radius: 30px;
+    max-width: 350px;
+    padding: 10px;
+    color: rgba(250, 235, 215, 0.829);
+    background-color: rgba(250, 235, 215, 0.096);
+    margin-left: 5%;
+      
+}
+div.c4_B1:hover{
+      transform: scale(1.1);
+    transition: all 0.5S ease;
+      box-shadow:00px 00px 500px goldenrod ;
+}
+div.c4_B2{
+    border: 2px solid rgba(218, 165, 32, 0.384);
+    border-radius: 30px;
+    max-width: 350px;
+    padding: 10px;
+    color: rgba(250, 235, 215, 0.829);
+    background-color: rgba(250, 235, 215, 0.096);
+}
+div.c4_B2:hover{
+    transform: scale(1.1);
+    transition: all 0.5S ease;
+    box-shadow:00px 00px 500px goldenrod ;
+}
+div.c4_B3{
+    border: 2px solid rgba(218, 165, 32, 0.384);
+    border-radius: 30px;
+    max-width: 350px;
+    padding: 10px;
+    color: rgba(250, 235, 215, 0.829);
+    background-color: rgba(250, 235, 215, 0.096);
+}
+div.c4_B3:hover{
+    transform: scale(1.1);
+    transition: all 0.5S ease;
+    box-shadow:00px 00px 500px goldenrod ;
+}
+div.container5{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+}
+div.c5_A{ 
+    max-width: 200px;
+    border: 1px solid rgba(218, 165, 32, 0.589);
+    padding: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+}
+div.c5_B{ 
+     border: 1px solid rgba(218, 165, 32, 0.582);
+    padding: 10px;
+    max-width: 300px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+div.c5_C{ 
+     border: 1px solid rgba(218, 165, 32, 0.603);
+    padding: 10px;
+    max-width: 300px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+div.container6 h1{
+    margin-top: 70px;
+    color: goldenrod;
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform: translateY(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
