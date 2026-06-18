@@ -1,123 +1,303 @@
-body{
-    background: rgb(0, 0, 0);
-    color: antiquewhite;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background: rgb(0, 0, 0);
+  color: antiquewhite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 nav .navigation {
+  display: flex;
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  border: 1px solid rgba(218, 165, 32, 0.356);
+  border-radius: 50px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: black;
+  z-index: 999;
+  padding: 0.25rem 0.8rem;
+}
+nav div.navigation ul {
+  display: flex;
+  gap: clamp(1rem, 3vw, 3.125rem);
+  margin-right: 1.5rem;
+  list-style: none;
+  margin-left: auto;
+  color: rgba(250, 235, 215, 0.637);
+  padding: 0.25rem 0;
+}
+nav div.navigation ul li a {
+  text-decoration: none;
+  color: rgba(250, 235, 215, 0.596);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+nav div.navigation ul li a:hover {
+  color: goldenrod;
+}
+div.container {
+  font-size: clamp(1rem, 2vw, 1.563rem);
+  margin-top: -3.125rem;
+  color: rgba(218, 165, 32, 0.603);
+  text-align: center;
+  padding-top: 0.5rem;
+}
+div.container1 {
+  margin-top: clamp(6rem, 15vw, 12.5rem);
+  margin-left: clamp(1rem, 3vw, 1.875rem);
+  max-width: min(90%, 600px);
+  padding: 0 1rem;
+}
+div.container1 h3 {
+  color: rgba(218, 165, 32, 0.685);
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
+}
+div.container1 h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-family: serif;
+  color: antiquewhite;
+  line-height: 1.2;
+}
+div.container1 p {
+  color: rgba(250, 235, 215, 0.589);
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
+  margin-top: 1rem;
+}
+div.container2 {
+  margin-top: clamp(3rem, 8vw, 6.25rem);
+  display: flex;
+  gap: clamp(2rem, 10vw, 18.75rem);
+  justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+div.container2 h1 {
+  color: goldenrod;
+  font-size: clamp(1.2rem, 1.5vw, 1.25rem);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+div.container2 div.ctn1 {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+div.container2 div.ctn1 div {
+  border: 1px solid rgba(250, 235, 215, 0.24);
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+div.container2 .ctn1 h3 {
+  color: rgba(250, 235, 215, 0.685);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+}
+div.container2 .ctn1 p {
+  margin-top: 0.5rem;
+  font-size: clamp(0.85rem, 1vw, 0.9rem);
+}
+div.container2 .ctn2 {
+  flex: 1 1 400px;
+  max-width: 550px;
+  border: 1px solid rgba(218, 165, 32, 0.233);
+  border-radius: 5px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background-color: rgba(250, 235, 215, 0.062);
+}
+div.container2 .ctn2 h2,
+div.container2 .ctn2 h3 {
+  color: rgba(250, 235, 215, 0.7);
+  font-size: clamp(0.85rem, 1vw, 0.9rem);
+  margin-bottom: 0.5rem;
+}
+div.container2 .ctn2 input,
+div.container2 .ctn2 textarea {
+  background-color: rgba(218, 165, 32, 0.205);
+  width: 100%;
+  border-bottom: 1px solid goldenrod;
+  border-left: 1px solid goldenrod;
+  border-top: none;
+  border-right: none;
+  border-radius: 10px;
+  color: rgba(250, 235, 215, 0.493);
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+div.container2 .ctn2 input:focus,
+div.container2 .ctn2 textarea:focus {
+  border-color: antiquewhite;
+  background-color: rgba(218, 165, 32, 0.3);
+}
+div.container2 .ctn2 textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+div.container2 .ctn2A {
+  display: flex;
+  gap: clamp(1rem, 3vw, 3.125rem);
+  flex-wrap: wrap;
+}
+div.container2 .ctn2A span {
+  flex: 1 1 200px;
+}
+div.container2 .ctn2 button {
+  padding: 0.75rem 2rem;
+  color: antiquewhite;
+  background-color: black;
+  border: 1px solid goldenrod;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 1.5rem auto 0;
+}
+div.container2 .ctn2 button:hover {
+  background-color: goldenrod;
+  color: black;
+}
+div.container3 {
+  text-align: center;
+  font-style: italic;
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
+  padding: 2rem 1rem 4rem;
+}
+div.container3 h1 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  line-height: 1.4;
+}
+div.container3 h2 {
+  color: goldenrod;
+  margin-top: 1rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+.menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: goldenrod;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  nav .navigation {
+    font-size: 1rem;
+  }
+  nav div.navigation ul {
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+  div.container2 {
+    gap: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    font-size: 20pt;
-    border: 1px solid rgba(218, 165, 32, 0.356);
-    border-radius: 50px;
     position: fixed;
-    right: 0;
-    background-color: black;
-    z-index: 9;
-}
-nav div.navigation ul{
-    display: flex;
-    gap: 50px;
-    margin-right: 30px;
-    list-style: none;
-    margin-left: auto;
-    color: rgba(250, 235, 215, 0.637);
-}
-nav div.navigation ul a {
-    text-decoration: none;
-    color: rgba(250, 235, 215, 0.596);
-}
-div.container{
-    font-size: 25pt;
-    margin-top: -50px;
-    color: rgba(218, 165, 32, 0.603);
-}
-div.container1{
-    margin-top: 200px;
-    margin-left: 30px;
-    max-width: 30%;
-}
-div.container1 h3{
-    color: rgba(218, 165, 32, 0.685);
-    font-size: 15pt;
-}
-div.container1 h1{
-    font-size: 40pt;
-    font-family: serif;
-    color: antiquewhite;
-}
-div.container1 p{
-    color: rgba(250, 235, 215, 0.589);
-    font-size: 15pt;
-}
-div.container2{
-    margin-top: 100px;
-    display: flex;
-    gap: 300px;
-    justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-div.container2 h1{
-    color: goldenrod;
-    font-size: 20pt;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-div.container2 div.ctn1 div{
-    border: 1px solid rgba(250, 235, 215, 0.24);
-    margin-top: 40px;
-    padding: 3%;
-}
-div.container2 .ctn1 h3{
-    color: rgba(250, 235, 215, 0.685);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-}
-div.container2 .ctn2{
-    border: 1px solid rgba(218, 165, 32, 0.233);
-    border-radius: 5px;
-    padding: 3%;
-    background-color: rgba(250, 235, 215, 0.062);
-}
-div.container2 .ctn2 input{
-    background-color: rgba(218, 165, 32, 0.205);
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+  nav .navigation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: min(75vw, 300px);
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    border: 1px solid rgba(218, 165, 32, 0.356);
+    border-right: 2px solid rgba(218, 165, 32, 0.4);
+    border-radius: 0 20px 20px 0;
+    padding: 5rem 2rem 2rem;
+    z-index: 999;
+  }
+  nav div.navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 40%;
-    border-bottom:1px solid goldenrod ;
-    border-left:1px solid goldenrod ;
-    border-top: none;
-    border-right: none;
-    border-radius: 10px;
-    color: rgba(250, 235, 215, 0.493);
-}
-div.container2 .ctn2 textarea{
-    background-color: rgba(218, 165, 32, 0.205);
+  }
+  nav div.navigation ul li a {
+    font-size: 1.1rem;
+  }
+  .menu-toggle:checked ~ .navigation {
+    display: flex;
+  }
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  div.container {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+  div.container1 {
+    margin-top: 4rem;
+    margin-left: 0;
+    max-width: 100%;
+  }
+  div.container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.container2 .ctn1,
+  div.container2 .ctn2 {
     width: 100%;
-    height: 120%;
-    border-bottom:1px solid goldenrod ;
-    border-left:1px solid goldenrod ;
-    border-top: none;
-    border-right: none;
-    border-radius: 10px;
-    color: rgba(250, 235, 215, 0.493);
-}
-div.container2 .ctn2 button{
-    padding: 3%;
-    margin-left: 30%;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: antiquewhite;
-    background-color: black;
-    border-radius: 10px;
-}
-div.container3{
-    text-align: center;
-    font-style: italic;
-    font-size: 15pt;
-}
-@media(max-width :780px){
-    div.container2{
-        flex-direction: column;
-    }
-    div.container2 .ctn2{
-        width:500px;
-    }
-    div.container2 div.ctn1 div{
-        width:300px ;
-    }
+    max-width: 100%;
+  }
+  div.container2 .ctn2A {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  div.container2 .ctn2 input,
+  div.container2 .ctn2 textarea {
+    width: 100%;
+  }
+  div.container2 .ctn2 button {
+    margin: 1.5rem auto 0;
+    width: 100%;
+  }
+  hr {
+    margin: 2rem 1rem;
+  }
 }

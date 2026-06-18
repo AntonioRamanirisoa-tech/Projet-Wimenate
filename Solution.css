@@ -1,313 +1,548 @@
-body{
-    background: rgb(0, 0, 0);
-    color: antiquewhite;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  background: rgb(0, 0, 0);
+  color: antiquewhite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 hr {
-    color: rgba(218, 165, 32, 0.603);
-    margin-bottom: 100px;
+  border: 0;
+  height: 1px;
+  background: rgba(218, 165, 32, 0.603);
+  margin: 2rem auto;
+  max-width: 90vw;
 }
 nav .navigation {
-    display: flex;
-    font-size: 20pt;
-    border: 1px solid rgba(218, 165, 32, 0.356);
-    border-radius: 50px;
-    position: fixed;
-    right: 0;
-    background-color: black;
-    z-index: 9;
-    margin-top: -14px;
+  display: flex;
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+  border: 1px solid rgba(218, 165, 32, 0.356);
+  border-radius: 50px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: black;
+  z-index: 999;
+  padding: 0.25rem 0.8rem;
+  margin-top: 0;
 }
-nav div.navigation ul{
-    display: flex;
-    gap: 50px;
-    margin-right: 30px;
-    list-style: none;
-    margin-left: auto;
-    color: rgba(250, 235, 215, 0.637);
+
+nav div.navigation ul {
+  display: flex;
+  gap: clamp(1rem, 3vw, 3.125rem);
+  margin-right: 1.5rem;
+  list-style: none;
+  margin-left: auto;
+  color: rgba(250, 235, 215, 0.637);
+  padding: 0.25rem 0;
 }
-nav div.navigation ul a {
-    text-decoration: none;
-    color: rgba(250, 235, 215, 0.596);
+
+nav div.navigation ul li a {
+  text-decoration: none;
+  color: rgba(250, 235, 215, 0.596);
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
-div .titre h1{
-    color: rgba(218, 165, 32, 0.74);
+
+nav div.navigation ul li a:hover {
+  color: goldenrod;
 }
-div.phrase p{
-    max-width: 300px;
-    padding: 10px;
-    font-size: 15pt;
-    margin-top: 200px;
-    border: 1px solid rgba(218, 165, 32, 0.788);
-    border-radius: 30px;
-    color: rgba(218, 165, 32, 0.842);
-    background-color: rgba(218, 165, 32, 0.103);
+div.titre h1 {
+  color: rgba(218, 165, 32, 0.74);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: 6rem;
+  text-align: center;
 }
-div.container{
-    display: flex;
-    gap: 250px;
-    margin-bottom: 100px;
+div.phrase p {
+  max-width: min(90vw, 300px);
+  padding: 0.625rem 1.5rem;
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
+  margin-top: clamp(4rem, 15vw, 12.5rem);
+  margin-left: clamp(1rem, 3vw, 2rem);
+  border: 1px solid rgba(218, 165, 32, 0.788);
+  border-radius: 30px;
+  color: rgba(218, 165, 32, 0.842);
+  background-color: rgba(218, 165, 32, 0.103);
+  text-align: center;
 }
-div.container div.container1{
-    margin-left: 30px;
-    width: 40%;
-    color: antiquewhite;
+div.container {
+  display: flex;
+  gap: clamp(2rem, 8vw, 15.625rem);
+  margin-bottom: clamp(3rem, 8vw, 6.25rem);
+  flex-wrap: wrap;
+  padding: 0 1rem;
 }
-div.container .container1 h2{
-  font-size: 40pt;
+
+div.container div.container1 {
+  margin-left: clamp(0rem, 3vw, 1.875rem);
+  width: min(90vw, 550px);
+  color: antiquewhite;
 }
-div.container .container1 p{
-  font-size: 15pt;
+
+div.container .container1 h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+div.container .container1 p {
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
   color: rgba(250, 235, 215, 0.568);
+  margin-top: 1rem;
 }
 div.container .container1 div.ctn {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: clamp(1rem, 3vw, 3.125rem);
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
-div.container .container1 div.ctn p{
-    color: antiquewhite;
-    border: 1px solid antiquewhite;
-    border-radius: 10px;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+
+div.container .container1 div.ctn p {
+  color: antiquewhite;
+  border: 1px solid antiquewhite;
+  border-radius: 10px;
+  padding: 0.625rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+div.container .container1 div.ctn p:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+
 div.container .container2 {
-    border: 1px solid rgba(218, 165, 32, 0.815);
-    border-radius: 30px;
-    background-color: rgba(241, 215, 150, 0.144);
-    z-index: 1;
-    padding: 3%;
-    padding-left: 80px;
-    width: 30%;
+  border: 1px solid rgba(218, 165, 32, 0.815);
+  border-radius: 30px;
+  background-color: rgba(241, 215, 150, 0.144);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  width: min(90vw, 450px);
 }
-div.container .container2 .ctn1{
-    display: flex;
-    gap: 100px;
+
+div.container .container2 .ctn1 {
+  display: flex;
+  gap: clamp(2rem, 6vw, 6.25rem);
+  flex-wrap: wrap;
+  justify-content: center;
 }
-div.container .container2 .ctn1 h1{
-    color: goldenrod;
+div.container .container2 .ctn1 h1 {
+  color: goldenrod;
+  font-size: clamp(2rem, 3vw, 2.5rem);
 }
-div.container .container2 .ctn1 span{
-    border: 1px solid goldenrod;
-    border-radius: 30px;
-    background-color: rgba(250, 235, 215, 0.082);
-    padding: 10px;
-    text-align: center;
+
+div.container .container2 .ctn1 span {
+  border: 1px solid goldenrod;
+  border-radius: 30px;
+  background-color: rgba(250, 235, 215, 0.082);
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
 }
-div.container .container2 .ctn2{
-    text-align: center;
-    margin-top: 30px;
-    font-size: 15pt;
+div.container .container2 .ctn2 {
+  text-align: center;
+  margin-top: 1.875rem;
+  font-size: clamp(0.85rem, 1.1vw, 0.938rem);
 }
-div.container .container2 .ctn2 div.range1{
-    width: 70%;
-    margin-left: 15%;
-    height: 0.5em;
-    background: linear-gradient(90deg, goldenrod 94%, antiquewhite 6%);
-    outline: 0.5px goldenrod;
-    border: 0.5px solid antiquewhite;
-    border-radius: 30px;
+
+div.container .container2 .ctn2 p {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: rgba(250, 235, 215, 0.7);
 }
-div.container .container2 .ctn2 div.range2{
-    width: 70%;
-    margin-left: 15%;
-    height: 0.5em;
-    background: linear-gradient(90deg, goldenrod 100%);
-    outline: 0.5px goldenrod;
-    border: 0.5px solid antiquewhite;
-    border-radius: 30px;
+
+div.container .container2 .ctn2 div.range1,
+div.container .container2 .ctn2 div.range2,
+div.container .container2 .ctn2 div.range3 {
+  width: 100%;
+  height: 0.5em;
+  outline: 0.5px goldenrod;
+  border: 0.5px solid antiquewhite;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
 }
-div.container .container2 .ctn2 div.range3{
-    width: 70%;
-    margin-left: 15%;
-    height: 0.5em;
-    background: linear-gradient(90deg, goldenrod 99%, antiquewhite 1%);
-    outline: 0.5px goldenrod;
-    border: 0.5px solid antiquewhite;
-    border-radius: 30px;
+
+div.container .container2 .ctn2 div.range1 {
+  background: linear-gradient(90deg, goldenrod 94%, antiquewhite 6%);
 }
-div.caise span.c1{
-    text-align: center;
-    margin-top: 5%;
+
+div.container .container2 .ctn2 div.range2 {
+  background: linear-gradient(90deg, goldenrod 100%);
 }
-div.caise span.c1 p{
-    color: rgba(218, 165, 32, 0.726);
-    font-size: 15pt;
+
+div.container .container2 .ctn2 div.range3 {
+  background: linear-gradient(90deg, goldenrod 99%, antiquewhite 1%);
 }
-div.caise span.c1 h1{
-    font-size: 40pt;
+div.caise span.c1 {
+  text-align: center;
+  display: block;
+  padding: 0 1rem;
 }
-div.caise span.c1 h6{
-    font-size: 14pt;
-    margin-top: -20px;
-    color: rgba(250, 235, 215, 0.459);
+
+div.caise span.c1 p {
+  color: rgba(218, 165, 32, 0.726);
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
 }
-div.caise .c2 {
-    display: flex;
-    gap: 100px;
-    margin-left: 200px;
-    margin-bottom: 100px;
+
+div.caise span.c1 h1 {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  color: antiquewhite;
+  margin: 0.5rem 0;
 }
-div.caise .c2 span:hover{
-    animation: caise123 ease-in-out 2s ;
+
+div.caise span.c1 h6 {
+  font-size: clamp(0.85rem, 1.2vw, 0.875rem);
+  color: rgba(250, 235, 215, 0.459);
+  font-weight: normal;
 }
-@keyframes caise123 {
-    to {
-        transform: rotateY(360deg);
-    }
-}
-div.caise div.c2 span{
-    border: 1px solid rgba(218, 165, 32, 0.39);
-    background-color: rgba(255, 204, 137, 0.075);
-    border-radius: 30px;
-    padding: 1%;
-    width: 250px;
-    height: 300px;
-    text-align: left;
-}
-div.caise div.c2 span p{
-    color: rgba(250, 235, 215, 0.541);
-}
-div.caise div.c2 span h4{
-    margin-top: 50px;
-    max-width: fit-content;
-    border: 1px solid rgba(218, 165, 32, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-    background-color: rgba(218, 165, 32, 0.137);
-    color: goldenrod;
-}
+div.caise .c2,
 div.caise .c3 {
-    display: flex;
-    gap: 100px;
-    margin-left: 200px;
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 6.25rem);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: clamp(2rem, 5vw, 6.25rem) auto;
+  padding: 0 1rem;
+  max-width: 1200px;
 }
-div.caise .c3 span:hover{
-    animation: caise123 ease-in-out 2s ;
+
+div.caise .c2 span,
+div.caise .c3 span {
+  border: 1px solid rgba(218, 165, 32, 0.39);
+  background-color: rgba(255, 204, 137, 0.075);
+  border-radius: 30px;
+  padding: clamp(1.5rem, 2vw, 2rem);
+  width: min(90vw, 300px);
+  min-height: 280px;
+  transition: transform 0.3s ease;
 }
+
+div.caise .c2 span:hover,
+div.caise .c3 span:hover {
+  animation: caise123 ease-in-out 2s;
+}
+
 @keyframes caise123 {
-    to {
-        transform: rotateY(360deg);
-    }
+  to {
+    transform: rotateY(360deg);
+  }
 }
-div.caise div.c3 span{
-    border: 1px solid rgba(218, 165, 32, 0.39);
-    background-color:rgba(255, 204, 137, 0.075) ;
-    border-radius: 30px;
-    padding: 1%;
-    width: 250px;
-    height: 300px;
-    text-align: left;
+
+div.caise .c2 span h2,
+div.caise .c3 span h2 {
+  color: goldenrod;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  margin-bottom: 0.5rem;
 }
-div.caise div.c3 span p{
-    color: rgba(250, 235, 215, 0.541);
+
+div.caise .c2 span p,
+div.caise .c3 span p {
+  color: rgba(250, 235, 215, 0.541);
+  font-size: clamp(0.85rem, 1.1vw, 0.9rem);
+  margin-top: 0.5rem;
 }
-div.caise div.c3 span h4{
-    margin-top: 50px;
-    max-width: fit-content;
-    border: 1px solid rgba(218, 165, 32, 0.5);
-    border-radius: 10px;
-    padding: 10px;
-    background-color: rgba(218, 165, 32, 0.137);
-    color: goldenrod;
+
+div.caise .c2 span h4,
+div.caise .c3 span h4 {
+  margin-top: 2rem;
+  max-width: fit-content;
+  border: 1px solid rgba(218, 165, 32, 0.5);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(218, 165, 32, 0.137);
+  color: goldenrod;
+  font-size: clamp(0.8rem, 1vw, 0.875rem);
 }
-div.c4{
-    margin-top: 100px;
-    background-color: rgba(202, 177, 112, 0.151);
-    border-top: 1px solid goldenrod;
-    border-bottom: 1px solid goldenrod;
+div.c4 {
+  margin-top: clamp(3rem, 8vw, 6.25rem);
+  background-color: rgba(202, 177, 112, 0.151);
+  border-top: 1px solid goldenrod;
+  border-bottom: 1px solid goldenrod;
+  display: flex;
+  gap: clamp(2rem, 5vw, 6.25rem);
+  flex-wrap: wrap;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
+}
+
+div.c4 .c4A {
+  flex: 1 1 350px;
+  max-width: 550px;
+}
+
+div.caise div.c4 .c4A p {
+  color: rgba(250, 235, 215, 0.555);
+  font-style: italic;
+  font-size: clamp(0.9rem, 1.2vw, 0.938rem);
+  margin-top: 1rem;
+}
+
+div.caise div.c4 .c4A h4 {
+  color: rgba(250, 235, 215, 0.76);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+div.caise div.c4 .c4B,
+div.caise div.c4 .c4C {
+  display: flex;
+  gap: clamp(1rem, 3vw, 6.25rem);
+  flex-wrap: wrap;
+}
+
+div.caise div.c4 .c4B span,
+div.caise div.c4 .c4C span {
+  border: 1px solid rgba(218, 165, 32, 0.521);
+  border-radius: 30px;
+  padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 4rem);
+  text-align: center;
+  flex: 1;
+  min-width: 130px;
+}
+
+div.caise div.c4 .c4B h1,
+div.caise div.c4 .c4C h1 {
+  color: goldenrod;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+div.caise div.c4 .c4B p,
+div.caise div.c4 .c4C p {
+  color: rgba(250, 235, 215, 0.637);
+  font-size: clamp(0.8rem, 1vw, 0.875rem);
+}
+
+div.caise .c4 > div:last-child {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+div.caise div.c5 {
+  margin-top: clamp(3rem, 8vw, 6.25rem);
+  text-align: center;
+  padding: 0 1rem 3rem;
+}
+
+div.caise div.c5 h1 {
+  color: antiquewhite;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  line-height: 1.3;
+}
+
+div.caise div.c5 p {
+  color: rgba(250, 235, 215, 0.678);
+  font-style: italic;
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+  margin: 1rem auto 2rem;
+  max-width: 700px;
+}
+div.caise div.c5 h4 a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  border: 1px solid antiquewhite;
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+div.caise div.c5 h4 a:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: goldenrod;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  nav .navigation {
+    font-size: 1rem;
+  }
+  nav div.navigation ul {
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+  div.container {
+    gap: 3rem;
+  }
+  div.caise .c2,
+  div.caise .c3 {
+    gap: 2rem;
+  }
+
+  .c4B span,
+  .c4C span {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    gap: 100px;
-}
-div.c4 .c4A{
-    margin-top: 80px;
-    margin-left: 20px;
-    width: 40%;
-}
-div.caise  div.c4 .c4A p{
-    color: rgba(250, 235, 215, 0.555);
-    font-style: italic;
-    font-size: 15pt;
-}
-div.caise  div.c4 .c4A h4{
-    color: rgba(250, 235, 215, 0.76);
-    font-size: 20pt;
-}
-div.caise  div.c4 .c4B{
-   display: flex;
-   gap: 100px;
-   margin-top: 200px;
-   width: 60%;
-}
-div.caise  div.c4 .c4B span{
-    border: 1px solid rgba(218, 165, 32, 0.521);
-    border-radius: 30px;
-    padding: 5%;
-    padding-left: 80px;
-    padding-right: 80px;
-}
-div.caise  div.c4 .c4B h1{
-    color: goldenrod;
-}
-div.caise  div.c4 .c4B p{
-    color: rgba(250, 235, 215, 0.637);
-}
-div.caise  div.c4 .c4C{
-   display: flex;
-   gap: 100px;
-   width: 60%;
-   margin-top: 10px;
-   padding-left: 100px;
-}
-div.caise  div.c4 .c4C span{
-    border: 1px solid rgba(218, 165, 32, 0.521);
-    border-radius: 30px;
-    padding: 5%;
-    padding-left: 80px;
-    padding-right: 80px;
-}
-div.caise  div.c4 .c4C h1{
-    color: goldenrod;
-}
-div.caise  div.c4 .c4C p{
-    color: rgba(250, 235, 215, 0.637);
-}
-div.caise  div.c5{
-    margin-top: 100px;
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+
+  nav .navigation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: min(75vw, 300px);
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    border: 1px solid rgba(218, 165, 32, 0.356);
+    border-right: 2px solid rgba(218, 165, 32, 0.4);
+    border-radius: 0 20px 20px 0;
+    padding: 5rem 2rem 2rem;
+    z-index: 999;
+  }
+
+  nav div.navigation ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  nav div.navigation ul li a {
+    font-size: 1.1rem;
+  }
+
+  .menu-toggle:checked ~ .navigation {
+    display: flex;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  div.titre h1 {
+    margin-top: 4rem;
+    font-size: 1.3rem;
+  }
+
+  div.phrase p {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.container div.container1 {
+    width: 100%;
+    margin-left: 0;
     text-align: center;
-}
-div.caise  div.c5 h1{
-    color: antiquewhite;
-    font-size: 40pt;
-}
-div.caise  div.c5 p{
-    color: rgba(250, 235, 215, 0.678);
-    font-style: italic;
-    font-size: 20pt;
-    margin-bottom: 80px;
-}
-div.caise  div.c5 h4 a{
-    text-decoration: none;
-    color: antiquewhite;
-    font-size: 20pt;
-    border: 1px solid antiquewhite;
-    border-radius: 10px;
-    padding: 10px;
-}
-@media(max-width :780px){
-    div.container{
-        flex-direction: column;
-    }
-    div.container .container2{
-        width: 400px;
-    }
-    div.caise .c2{
-        flex-direction: column;
-    }
-    div.caise .c3{
-        flex-direction: column;
-    }
-    div.c4{
-        flex-direction: column;
-    }
+  }
+
+  div.container .container1 div.ctn {
+    justify-content: center;
+  }
+
+  div.container .container2 {
+    width: 100%;
+  }
+
+  div.container .container2 .ctn1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  div.container .container2 .ctn1 span {
+    width: 100%;
+  }
+
+  .div.caise .c2,
+  .caise .c3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 0;
+  }
+
+  div.caise .c2 span,
+  div.caise .c3 span {
+    width: min(90vw, 350px);
+  }
+
+  div.c4 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  div.c4 .c4A {
+    width: 100%;
+  }
+
+  div.caise div.c4 .c4B,
+  div.caise div.c4 .c4C {
+    gap: 1rem;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  div.caise div.c4 .c4B span,
+  div.caise div.c4 .c4C span {
+    padding: 1rem 1.5rem;
+    min-width: 100px;
+  }
 }
